@@ -6,6 +6,7 @@
 <h1>Line Chart (XY)</h1>
 <!--Container div that holds the rendered chart-->
 <div id="chart-element"></div>
+<div id="bar-chart-element"></div>
 
 @code {
 
@@ -28,7 +29,14 @@
     async void ShowLineChart()
     {
         // JS Interop call to the wrapper over LCJS.
+
+        await JsRunTime.InvokeVoidAsync("LCJSBlazor.jlr1");
+
+
+
         await JsRunTime.InvokeVoidAsync("LCJSBlazor.CreateXYChart", GenerateLineSeries(3, 50));
+
+        await JsRunTime.InvokeVoidAsync("LCJSBlazor.SecondChart");
         StateHasChanged();
     }
 

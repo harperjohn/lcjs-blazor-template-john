@@ -4,12 +4,22 @@
  */
 
  import {createXYChart} from './lcjs_xy'
- import {create3dChart} from './lcjs_3d'
+import { create3dChart } from './lcjs_3d'
+import {createBarChart} from './bar_chart'
 
- export function CreateXYChart(pointsCollection){
+export function CreateXYChart(pointsCollection) {
+    window.alert("hello");
      return createXYChart(pointsCollection)
  }
 
  export function Create3DChart(pointsCollection){
      return create3dChart(pointsCollection)
- }
+}
+
+export function SecondChart() {
+    return createBarChart()
+}
+
+export function jlr1() {
+    window.alert("hello");
+}

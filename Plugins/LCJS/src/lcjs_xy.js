@@ -27,10 +27,11 @@ export function createXYChart(pointsCollection) {
     // Modify the default X Axis to use DateTime TickStrategy, and set the origin for the DateTime Axis.
     chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin))
 
+    
     chart.setPadding({
         right: 50
     })
-        .setTitle('LCJS Blazor Test')
+        .setTitle('jlr... LCJS Blazor Test')
 
     // Set the correct value to use for the data frequency.
     // 1000ms * 60s * 60min * 24h
